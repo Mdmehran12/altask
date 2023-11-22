@@ -1,0 +1,437 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: black !important; */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* login page style starts from here */
+.login-page-main {
+  background-color: #eeeeee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: black !important;
+}
+
+.login-box {
+  /* height: 65%;
+    width: 75%; */
+  background-color: red;
+  /* margin: auto; */
+  background-color: white;
+}
+
+.login-box-in {
+  display: flex;
+  height: 100%;
+}
+
+.login-image-color {
+  background-color: rgba(6, 6, 7, 0.7);
+  /* background-color: rgba(39, 55, 77, 0.8); */
+  /* 4F709C */
+
+  /* fallback for old browsers */
+  /* background-color: linear-gradient(to right, #2C5364, #203A43, #0F2027, 0.6); */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  height: 100%;
+}
+
+.login-image {
+  width: 50%;
+  /* background-image: "../images/todo background.jpg"; */
+  height: 100% !important;
+  background-image: url("../../assets/images/login\ background\ image.png") !important;
+  background-size: 100%;
+  /* padding: 20px; */
+}
+
+.logo img {
+  width: 220px;
+  /* filter: invert(); */
+  padding: 40px;
+}
+
+.login-image .desc {
+  color: white;
+  padding: 60px;
+  text-transform: capitalize;
+  word-spacing: 7px;
+  /* margin: auto; */
+
+  /* align-items: center; */
+}
+
+.desc h2 {
+  line-height: 45px;
+}
+
+.login-content {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  color: #1a1110;
+}
+
+.quote-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 75%;
+}
+
+.log-btn {
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+  font-size: 16px;
+  width: 55%;
+  max-width: 100%;
+  padding: 6px 20px;
+}
+
+.log-btn:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.planz-account {
+  width: 65%;
+  margin: auto;
+}
+.planz-account a {
+  text-decoration: none;
+  color: black;
+}
+
+.planz-account a:hover {
+  color: #e42b37;
+}
+
+.planz-account span {
+  text-decoration: underline;
+}
+
+.log-list {
+  display: flex;
+}
+
+.log-phone {
+  position: absolute;
+  top: -160px;
+  width: 100%;
+  display: none;
+  padding-bottom: 30px;
+}
+
+.log-phone h2 {
+  font-size: 35px;
+}
+
+.log-phone img {
+  width: 170px;
+}
+
+.animate__fadeInDown {
+  display: inline-block;
+
+  animation: animate__fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+.welcome-text {
+  font-size: 32px;
+}
+
+.welcome-text span {
+  color: #e42b37;
+}
+
+@media screen and (max-width: 786px) {
+  .login-image {
+    display: none;
+  }
+
+  .TextField {
+    width: 80%;
+  }
+
+  .login-content {
+    width: 100%;
+  }
+  .log-phone {
+    display: block;
+  }
+}
+
+.MuiDrawer-paper,
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+  background-color: black !important;
+  /* color: white !important; */
+}
+
+.css-8u39c-MuiTypography-root {
+  width: 100%;
+}
+
+.css-3wafqk {
+  width: 100%;
+}
+
+.notes-app1 {
+  height: 100vh;
+  display: flex;
+  gap: 15px;
+  /* padding: 40px; */
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: lightslategrey;
+  transition: 300px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: grey;
+}
+
+/* note container section */
+.note-container {
+  height: 90%;
+}
+
+.note-container h2 {
+  margin-bottom: 20px;
+}
+
+.note-container-notes {
+  /* min-height: 200px;
+      max-height: 100%; */
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  gap: 20px;
+  /* overflow-y: scroll; */
+}
+
+/* sidebar section */
+.img1 {
+  cursor: pointer;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  height: 0;
+  transition: 300ms;
+}
+
+.sidebar-list-item {
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+}
+
+.sidebar-list li {
+  list-style: none;
+}
+
+.sidebar-list-active {
+  height: 400px;
+}
+
+/* notes section style */
+.note {
+  padding: 10px;
+  max-height: 400px;
+  height: 100%;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+  border-radius: 8px;
+  margin: 5px;
+  /* overflow-y:scroll ; */
+}
+
+/* .note_text{
+    flex: 1;
+    resize: none;
+    background-color: transparent;
+    font-size: 1rem;
+    line-height: 1.875rem;
+  
+    outline: none;
+    border: none;
+  } */
+
+.note_text_heading {
+  resize: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-bottom: 7px;
+  font-size: 20px;
+  max-height: 85px;
+  color: white;
+  font-weight: 600;
+}
+
+.note_text_heading::-webkit-scrollbar {
+  display: none;
+}
+
+.note_text {
+  resize: none;
+  /* overflow: hidden;  */
+  min-height: 50px;
+  width: 100%;
+  background-color: transparent;
+  font-size: 14px;
+  outline: none;
+  border: none;
+}
+
+.note_text::-webkit-scrollbar {
+  display: none;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-delte-icon {
+  opacity: 0;
+}
+
+.footer-delte-icon:hover {
+  cursor: pointer;
+}
+
+.note:hover .note-footer .footer-delte-icon {
+  opacity: 1;
+}
+
+.note:hover {
+  outline: 1px solid grey;
+}
+
+.note:active {
+  outline: 1px solid grey;
+}
+
+.css-2dum1v-MuiDrawer-docked .MuiDrawer-paper,
+.MuiDrawer-paper,
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+  box-shadow: 1px 0px 2px 0px rgb(255 255 255);
+}

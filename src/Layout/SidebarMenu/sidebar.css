@@ -1,0 +1,41 @@
+.navbar-in {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-head {
+  background-color: black !important;
+}
+.css-1r9jet7 {
+  /* background-color: #121212; */
+}
+
+.main-logo img {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  padding-right: 70px;
+}
+
+.sidebar-head {
+  /* background-color: black; */
+}
+
+.sidebar-head .sidebar-text {
+  color: white;
+}
+
+.sidebar-head .sidebar-icon {
+  color: white;
+}
+
+.main-in {
+  /* background-color: #121212;  */
+  height: 100vh;
+}
+
+.side-list:hover {
+  background-color: #b33030;
+}

@@ -1,0 +1,13 @@
+.main-sec{
+    width: 100%;
+    display: flex;
+}
+
+
+.left-section{
+    width: 50%;
+}
+
+.right-section{
+    width: 50%;
+}

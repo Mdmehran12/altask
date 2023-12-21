@@ -25,8 +25,9 @@ import CottageIcon from "@mui/icons-material/Cottage";
 import MapIcon from "@mui/icons-material/Map";
 import JavascriptIcon from "@mui/icons-material/Javascript";
 import BlurCircularIcon from "@mui/icons-material/BlurCircular";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Navigate, Outlet, useLocation, useNavigate } from "react-router-dom";
 import AccountMenu from "./Account";
+import AppsIcon from '@mui/icons-material/Apps';
 
 const drawerWidth = 240;
 
@@ -107,6 +108,9 @@ export default function SidebarMenu() {
     setOpen(false);
   };
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const sidebarData = [
     {
       title: "usestate",
@@ -132,7 +136,18 @@ export default function SidebarMenu() {
       link: "/dashboard/useeeffect",
       tooltip: "useeeffect",
     },
+    {
+      title: "UI Component",
+      icon: <AppsIcon />,
+      link: "/dashboard/uicomponent",
+      tooltip: "ui component",
+    },
   ];
+
+  const handleItemClick = (link) => {
+    // Use the navigate function to programmatically navigate to the specified link
+    navigate(link);
+  };
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -173,48 +188,45 @@ export default function SidebarMenu() {
         </DrawerHeader>
         {/* <Divider /> */}
         <List className="sidebar-head">
-          {sidebarData.map((item, index) => (
-            <div
-              key={index}
-              className={`side-list ${index === 1 ? "active" : ""}`}
-            >
-              <ListItem disablePadding sx={{ display: "block" }}>
-                <Tooltip title={item.tooltip} placement="right">
-                  <ListItemButton
+        {sidebarData.map((item, index) => (
+          <div  key={index} className={`side-list ${location.pathname === item.link ? "active" : ""}`}>
+            <ListItem disablePadding sx={{ display: "block" }}>
+              <Tooltip title={item.tooltip} placement="right">
+                <ListItemButton
+                  sx={{
+                    minHeight: 48,
+                    justifyContent: open ? "initial" : "center",
+                    px: 2.5,
+                  }}
+                  onClick={() => handleItemClick(item.link)}
+                >
+                  <ListItemIcon
                     sx={{
-                      minHeight: 48,
-                      justifyContent: open ? "initial" : "center",
-                      px: 2.5,
+                      minWidth: 0,
+                      mr: open ? 3 : "auto",
+                      justifyContent: "center",
                     }}
+                    className="sidebar-icon"
                   >
-                    <ListItemIcon
-                      sx={{
-                        minWidth: 0,
-                        mr: open ? 3 : "auto",
-                        justifyContent: "center",
-                      }}
-                      className="sidebar-icon"
-                    >
-                      {item.icon}
-                    </ListItemIcon>
-                    <ListItemText
-                      sx={{ opacity: open ? 1 : 0 }}
-                      className="sidebar-text"
-                    >
-                      <Link to={item.link}>{item.title}</Link>
-                    </ListItemText>
-                  </ListItemButton>
-                </Tooltip>
-              </ListItem>
-            </div>
-          ))}
-        </List>
+                    {item.icon}
+                  </ListItemIcon>
+                  <ListItemText
+                    sx={{ opacity: open ? 1 : 0 }}
+                    className="sidebar-text"
+                  >
+                    <Link to={item.link} style={{color:"white",textDecoration:"none"}}>{item.title}</Link>
+                  </ListItemText>
+                </ListItemButton>
+              </Tooltip>
+            </ListItem>
+          </div>
+        ))}
+      </List>
         <Divider />
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }} className="main-in">
         <DrawerHeader />
         <Typography paragraph>
-          ads
           <Outlet />
         </Typography>
       </Box>
